@@ -1,4 +1,4 @@
-# JSC Data Science Reports
+# Data Science Reports
 Data Science Courses project reports and related. 
 
 ## Contents
