@@ -1,0 +1,22 @@
+Overall: 
+First do clustering on the genes and make several clusters, look at how their features (tumor stage, age, gender, race) are different for subgroups. Then, do a survival analysis (cox regression) on the features collected and clusters that seems to be useful. Finally, try to conclude whether there are particular patterns of the genes that will have impact on the cancer and survival time for specific groups of people. 
+
+Q. How will you define if a subject is censored?
+
+We first define the censoring time from the days_to_last_follow_up and days_to_death. Then, we have 404 censoring time points. And a patient is censored if its days_to_last_follow_up is less than or equal to the censoring time, otherwise, it's uncensored.
+
+
+Q. How will you derive the subgroups?
+
+The subgroups will be decided by the genes. Try different clustering algorithms, such as KNN, leivain, leiden. Then we do further analysis on the clusters for the patients' features. 
+
+
+Q. How will you visualize the results of your analyses?
+
+For the gene clustering, plot the high-dim data on UMAP/tSNE/PCA basis as scatters, or heatmap/violin plots. Then, do boxplot, bar plot for each cluster and how they differentiate among different features of the patients. 
+
+Q. How will you decide if the subgroups have different survival times?
+Do survival analysis on the overall patients, and then do survival analysis on each of the subgroups and see whether there are differences in the outcome. 
+
+Packages that may help: sklearn, scanpy, lifelines. 
+
